@@ -21,6 +21,13 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     private AudioSource shootSource;
 
+    Animator animator_attack;
+
+    private void Awake()
+    {
+        animator_attack = GetComponent<Animator>(); 
+    }
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -28,6 +35,7 @@ public class Shoot : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
+                animator_attack.SetTrigger("Attack");
                 timer = 0f;
                 FireGun();
             }
@@ -36,10 +44,8 @@ public class Shoot : MonoBehaviour
 
     private void FireGun()
     {
-        
-
         muzzleParticle.Play();
-        shootSource.Play();
+        shootSource.Play(20000);
 
         Ray ray = Camera.main.ViewportPointToRay(Vector3.one * 0.5f);
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2f);

@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 606411684}
   - component: {fileID: 606411683}
   - component: {fileID: 606411689}
+  - component: {fileID: 606411682}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -381,6 +382,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &606411682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606411681}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5893e8b1597c2374d8207fbdf374c785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 2077340968}
+  camTransform: {fileID: 0}
 --- !u!114 &606411683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +549,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606411681}
-  m_LocalRotation: {x: 0.121248655, y: 0.000000027237489, z: -0.00000007670742, w: 0.9926222}
+  m_LocalRotation: {x: 0.121248655, y: 0.000000018138344, z: -0.0000000022158175,
+    w: 0.9926222}
   m_LocalPosition: {x: 0, y: 4.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -698,7 +714,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979063175}
-  m_LocalRotation: {x: 0.121248655, y: 0.000000027237489, z: -0.00000007670742, w: 0.9926222}
+  m_LocalRotation: {x: 0.121248655, y: 0.000000018138344, z: -0.0000000022158175,
+    w: 0.9926222}
   m_LocalPosition: {x: 0, y: 4.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -718,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9445c3ebb592f654a9cb82b84cb5e544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0.4
+  sensitivity: 1
 --- !u!1001 &1235187200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,11 +881,11 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.01
+  m_SoftZoneHeight: 0.01
   m_BiasX: 0
   m_BiasY: 0
-  m_CenterOnActivate: 0
+  m_CenterOnActivate: 1
 --- !u!114 &1410125379
 MonoBehaviour:
   m_ObjectHideFlags: 3

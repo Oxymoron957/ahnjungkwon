@@ -738,9 +738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f998b03173d992141afda2e3a0230aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
-  backwardMoveSpeed: 5
-  turnSpeed: 80
+  moveSpeed: 10
+  backwardMoveSpeed: 4
+  turnSpeed: 150
+  jumpForce: 10
 --- !u!114 &1463079863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2743,10 +2744,20 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 198694502634222740, guid: b3d8264aa7d2d824a8a503e45291ddf4,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 198785070284630344, guid: b3d8264aa7d2d824a8a503e45291ddf4,
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198785070284630344, guid: b3d8264aa7d2d824a8a503e45291ddf4,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}

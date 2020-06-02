@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CameraController__ : MonoBehaviour
 {
     [SerializeField]
@@ -21,9 +20,9 @@ public class CameraController__ : MonoBehaviour
         float horizontal = Input.GetAxis("Mouse X") * sensitivity;
 
         composer.m_TrackedObjectOffset.y += vertical;
-        composer.m_TrackedObjectOffset.y = Mathf.Clamp(composer.m_TrackedObjectOffset.y, -3, 3);
+        composer.m_TrackedObjectOffset.y = Mathf.Clamp(composer.m_TrackedObjectOffset.y, 0, 3);
 
         composer.m_TrackedObjectOffset.x += horizontal;
-        composer.m_TrackedObjectOffset.x = Mathf.Clamp(composer.m_TrackedObjectOffset.x, -3, 3);
+        composer.m_TrackedObjectOffset.x = Mathf.Clamp(composer.m_TrackedObjectOffset.x, -2, 2);
     }
 }
