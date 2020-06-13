@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
+
 public class PlayerMovement__ : MonoBehaviour
 {
     Vector3 m_Movement;
@@ -68,62 +68,63 @@ public class PlayerMovement__ : MonoBehaviour
         m_Rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
-*/
 
+/*
 public class PlayerMovement__ : MonoBehaviour
 {
-    private Animator animator;
-    private CharacterController characterController;
+private Animator animator;
+private CharacterController characterController;
 
-    [SerializeField]
-    private float moveSpeed = 8f;
-    [SerializeField]
-    private float turnSpeed = 150f;
-    [SerializeField]
-    private float jumpForce = 6f;
+[SerializeField]
+private float moveSpeed = 8f;
+[SerializeField]
+private float turnSpeed = 150f;
+[SerializeField]
+private float jumpForce = 6f;
 
-    private float gravity = 9.8f;
-    private bool isJumping = false;
+private float gravity = 9.8f;
+private bool isJumping = false;
 
-    Vector3 movement = Vector3.zero;
+Vector3 movement = Vector3.zero;
 
-    private void Awake()
-    {
-        characterController = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+private void Awake()
+{
+    characterController = GetComponent<CharacterController>();
+    animator = GetComponent<Animator>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        animator.SetFloat("HorizontalVelocity", horizontal);
-        animator.SetFloat("VerticalVelocity", vertical);
-
-        transform.Rotate(Vector3.up, horizontal * turnSpeed * Time.deltaTime); 
-
-        isJumping = false;
-        if (characterController.isGrounded)
-        {
-            movement = new Vector3(horizontal, 0, vertical);
-            movement = transform.TransformDirection(movement);
-            movement *= moveSpeed;
-
-            if (Input.GetButton("Jump"))
-            {
-                movement.y = jumpForce;
-                isJumping = true;
-                animator.SetBool("isJumping", isJumping);
-            }
-
-        }
-        movement.y -= gravity * Time.deltaTime;
-        characterController.Move(movement * Time.deltaTime);
-
-    }
+    Cursor.lockState = CursorLockMode.Locked;
 }
 
+// Update is called once per frame
+void Update()
+{
+    float horizontal = Input.GetAxis("Horizontal");
+    float vertical = Input.GetAxis("Vertical");
+
+    animator.SetFloat("HorizontalVelocity", horizontal);
+    animator.SetFloat("VerticalVelocity", vertical);
+
+    transform.Rotate(Vector3.up, horizontal * turnSpeed * Time.deltaTime); 
+
+    isJumping = false;
+    if (characterController.isGrounded)
+    {
+        movement = new Vector3(horizontal, 0, vertical);
+        movement = transform.TransformDirection(movement);
+        movement *= moveSpeed;
+
+        if (Input.GetButton("Jump"))
+        {
+            movement.y = jumpForce;
+            isJumping = true;
+            animator.SetBool("isJumping", isJumping);
+        }
+
+    }
+    movement.y -= gravity * Time.deltaTime;
+    characterController.Move(movement * Time.deltaTime);
+
+}
+}
+
+*/
